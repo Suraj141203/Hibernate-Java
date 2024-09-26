@@ -1,4 +1,4 @@
-package com.rays.user;
+ package com.rays.user;
 
 import java.util.Date;
 
@@ -7,18 +7,20 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-public class TestSave {
+import com.rays.user.UserDTO;
+
+public class TestUpdate {
 
 	public static void main(String[] args) {
 
 		UserDTO dto = new UserDTO();
-		// dto.setId(2);
-		dto.setFirstName("Suraj");
-		dto.setLastName("Yadav");
-		dto.setLoginId("Surajyadav@gmail.com");
-		dto.setPassword("0710");
+		dto.setId(0);
+		dto.setFirstName("Vinjal");
+		dto.setLastName("Jain");
+		dto.setLoginId("Jain1412@gmail.com");
+		dto.setPassword("4321");
 		dto.setDob(new Date());
-		dto.setAddress("Indore");
+		dto.setAddress("Ratlam");
 
 		SessionFactory sf = new Configuration().configure().buildSessionFactory();
 
@@ -26,12 +28,10 @@ public class TestSave {
 
 		Transaction tx = session.beginTransaction();
 
-		session.save(dto);
+		session.update(dto);
 
 		tx.commit();
 
 		session.close();
-
 	}
-	
 }
