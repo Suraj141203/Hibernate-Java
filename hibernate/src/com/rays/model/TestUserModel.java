@@ -3,14 +3,13 @@ package com.rays.model;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-
 import com.rays.user.UserDTO;
 
 public class TestUserModel {
 
 	public static void main(String[] args) {
 
-		// testAdd();
+		//testAdd();
 		testUpdate();
 		// testGet();
 		// testDelete();
@@ -97,12 +96,12 @@ public class TestUserModel {
 
 		UserDTO dto = new UserDTO();
 		dto.setId(1);
-		dto.setFirstName("sagar");
-		dto.setLastName("kanungo");
-		dto.setLoginId("sagar@gmail.com");
-		dto.setPassword("123");
+		dto.setFirstName("Suraj ");
+		dto.setLastName("Yadav");
+		dto.setLoginId("Surajyadav@gmail.com");
+		dto.setPassword("0710");
 		dto.setDob(new Date());
-		dto.setAddress("indore");
+		dto.setAddress("Indore");
 
 		UserModel model = new UserModel();
 
